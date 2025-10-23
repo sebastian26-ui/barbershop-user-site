@@ -1,0 +1,2644 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The One Barber Club - Servicios de Barbería Premium</title>
+    <style>
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Color Variables */
+:root {
+    --primary-gold: #D4AF37;
+    --secondary-gold: #F4E4BC;
+    --accent-gold: #FFD700;
+    --black: #1a1a1a;
+    --dark-gray: #333333;
+    --light-gray: #f5f5f5;
+    --white: #ffffff;
+    --border-color: #e0e0e0;
+    --red: #DC143C;
+    --blue: #4169E1;
+}
+
+/* Header */
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.logo-text .tagline {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 0.2rem;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    text-align: right;
+}
+
+.header-info span {
+    font-size: 0.9rem;
+    color: #374151;
+    font-weight: 500;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.book-now-btn {
+    background-color: #fbbf24;
+    color: #1a1a1a;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.book-now-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 3rem 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.hero-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #fef3c7;
+    color: #1a1a1a;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+}
+
+.hero-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #374151;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+}
+
+.feature-item i {
+    color: #fbbf24;
+    font-size: 1.1rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.primary-btn {
+    background-color: #fbbf24;
+    color: #1a1a1a;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: #1a1a1a;
+    border: 1px solid #fbbf24;
+}
+
+.primary-btn:hover, .secondary-btn:hover {
+    transform: translateY(-2px);
+}
+
+.primary-btn:hover {
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.secondary-btn:hover {
+    background: var(--primary-gold);
+    color: var(--white);
+}
+
+.hero-image {
+    position: relative;
+}
+
+.image-frame {
+    background: #ffffff;
+    border: 2px dashed #d1d5db;
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barber-tools {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    z-index: 10;
+}
+
+.tool {
+    width: 35px;
+    height: 35px;
+    background: #fbbf24;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tool:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.tool:nth-child(3) {
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.image-placeholder {
+    background: transparent;
+    border-radius: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    border: none;
+    text-align: center;
+}
+
+.image-placeholder i {
+    font-size: 3rem;
+    color: #fbbf24;
+    margin-bottom: 1rem;
+}
+
+.image-placeholder p {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    background-color: #ffffff;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Left Column */
+.business-showcase {
+    background: #ffffff;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+}
+
+.showcase-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.showcase-header h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.rating-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #fef3c7;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+.stars {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.stars i {
+    color: #fbbf24;
+    font-size: 1rem;
+}
+
+.rating-text {
+    font-weight: 500;
+    color: #1a1a1a;
+    font-size: 0.9rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.business-description p {
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+}
+
+.highlight-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.highlight.premium {
+    background: #fef7f0;
+    border: 1px solid #D4AF37;
+}
+
+.highlight:hover {
+    background: var(--secondary-gold);
+    transform: translateX(5px);
+}
+
+.highlight i {
+    color: #fbbf24;
+    font-size: 1.2rem;
+}
+
+.social-connect h4 {
+    color: var(--black);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--light-gray);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--dark-gray);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--secondary-gold);
+    color: var(--black);
+    transform: translateX(5px);
+}
+
+.social-link i {
+    font-size: 1.2rem;
+}
+
+.social-link.instagram i {
+    color: #E4405F;
+}
+
+.social-link.whatsapp i {
+    color: #25D366;
+}
+
+/* Right Column */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.map-section {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.map-container {
+    height: 250px;
+    background: linear-gradient(135deg, var(--light-gray) 0%, #e8e8e8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.map-placeholder {
+    text-align: center;
+    color: var(--dark-gray);
+}
+
+.map-placeholder i {
+    font-size: 3rem;
+    color: var(--primary-gold);
+    margin-bottom: 1rem;
+}
+
+.location-info {
+    padding: 2rem;
+}
+
+.address {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark-gray);
+    font-weight: 500;
+}
+
+.address i {
+    color: var(--primary-gold);
+    margin-top: 0.2rem;
+    font-size: 1.2rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--dark-gray);
+    padding: 0.75rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.contact-item:hover {
+    background: var(--light-gray);
+    transform: translateX(5px);
+}
+
+.contact-item i {
+    color: var(--primary-gold);
+    font-size: 1.2rem;
+    width: 20px;
+}
+
+.contact-item.whatsapp {
+    color: #25D366;
+}
+
+.contact-item.whatsapp i {
+    color: #25D366;
+}
+
+/* Professionals Section */
+.professionals-section {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.professionals-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.professionals-list {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    overflow-x: auto;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.professional-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 100px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.professional-card:hover {
+    transform: translateY(-5px);
+}
+
+.professional-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-gold) 0%, var(--accent-gold) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--white);
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.professional-avatar i {
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.professional-name {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    font-weight: 500;
+}
+
+.scroll-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--primary-gold);
+    border-radius: 50%;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.scroll-arrow:hover {
+    background: var(--accent-gold);
+    transform: scale(1.1);
+}
+
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--primary-gold);
+    transform: scale(1.2);
+}
+
+/* Services Section */
+.services-section {
+    padding: 3rem 0;
+    background-color: #ffffff;
+}
+
+.services-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.header-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+}
+
+.header-content p {
+    color: var(--dark-gray);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.service-categories {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.category-btn {
+    background: transparent;
+    border: 2px solid var(--border-color);
+    color: var(--dark-gray);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background: var(--primary-gold);
+    border-color: var(--primary-gold);
+    color: var(--white);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-card.premium {
+    background: #fef7f0;
+    border: 1px solid #D4AF37;
+}
+
+.service-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #D4AF37;
+    color: #ffffff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.service-icon {
+    width: 50px;
+    height: 50px;
+    background: #fbbf24;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon i {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.service-content h3 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.service-content p {
+    color: #6b7280;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.service-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.75rem 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.duration {
+    color: #6b7280;
+    font-weight: 500;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.9rem;
+}
+
+.price {
+    color: #1a1a1a;
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.book-btn {
+    width: 100%;
+    background: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.book-btn:hover {
+    background: var(--primary-gold);
+    transform: translateY(-2px);
+}
+
+.premium-btn {
+    background: linear-gradient(135deg, var(--primary-gold) 0%, var(--accent-gold) 100%);
+}
+
+.premium-btn:hover {
+    background: linear-gradient(135deg, var(--accent-gold) 0%, var(--primary-gold) 100%);
+}
+
+/* Social Media Chat Menu */
+.social-chat-menu {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.chat-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-gold) 0%, var(--accent-gold) 100%);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.chat-menu-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.chat-dropdown {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    min-width: 180px;
+    overflow: hidden;
+}
+
+.chat-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.chat-option {
+        display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: var(--dark-gray);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.chat-option:last-child {
+    border-bottom: none;
+}
+
+.chat-option:hover {
+    background: var(--light-gray);
+    color: var(--black);
+}
+
+.chat-option i {
+    font-size: 1.2rem;
+    width: 20px;
+        text-align: center;
+}
+
+.whatsapp-option i {
+    color: #25D366;
+}
+
+.instagram-option i {
+    color: #E4405F;
+}
+
+.barber-option i {
+    color: #1a1a1a;
+}
+
+.barber-option:hover {
+    background: #fef3c7;
+}
+
+.chat-option span {
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .content-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .header-actions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .header-info {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 1rem;
+    }
+    
+    .main-content {
+        padding: 2rem 1rem;
+    }
+    
+    .services-container {
+        padding: 0 1rem;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .service-categories {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .professionals-list {
+        gap: 1rem;
+    }
+    
+    .professional-card {
+        min-width: 80px;
+    }
+    
+    .professional-avatar {
+        width: 50px;
+        height: 50px;
+        font-size: 0.9rem;
+    }
+    
+    .professional-name {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .services-header h2 {
+        font-size: 2rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    .social-chat-menu {
+        bottom: 1rem;
+        right: 1rem;
+    }
+    
+    .chat-menu-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+}
+
+    .chat-dropdown {
+        bottom: 60px;
+        min-width: 160px;
+    }
+}
+    </style>
+    <style>
+/* Reservation Popup Styles */
+/* Add this CSS to your existing styles.css or styles_elegant.css */
+
+/* Overlay */
+.reservation-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10000;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+}
+
+.reservation-overlay.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Popup Container */
+.reservation-popup {
+    background: #ffffff;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Close Button */
+.popup-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #6b7280;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.popup-close:hover {
+    background: #f3f4f6;
+    color: #1a1a1a;
+}
+
+/* Popup Header */
+.popup-header {
+    padding: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.popup-header h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 0.5rem 0;
+}
+
+.popup-header .service-name {
+    color: #fbbf24;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Form Styles */
+.reservation-form {
+    padding: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.form-group label i {
+    color: #fbbf24;
+    font-size: 0.9rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #fbbf24;
+    box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #9ca3af;
+}
+
+/* Optional Section */
+.optional-section {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+/* Availability Section */
+.availability-loading {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 8px;
+    color: #6b7280;
+}
+
+.availability-loading i {
+    color: #fbbf24;
+}
+
+#availabilityResults {
+    margin-top: 0.5rem;
+}
+
+.barber-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.barber-option:hover {
+    border-color: #fbbf24;
+    background: #fef3c7;
+}
+
+.barber-option.selected {
+    border-color: #fbbf24;
+    background: #fef3c7;
+}
+
+.barber-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.barber-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fbbf24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.barber-details h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.barber-details p {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.barber-select-icon {
+    color: #fbbf24;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.barber-option.selected .barber-select-icon {
+    opacity: 1;
+}
+
+.no-availability {
+    padding: 1.5rem;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    text-align: center;
+    color: #991b1b;
+}
+
+.no-availability i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.no-availability p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.btn-cancel,
+.btn-submit {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-cancel {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.btn-cancel:hover {
+    background: #e5e7eb;
+}
+
+.btn-submit {
+    background: #fbbf24;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-submit:hover:not(:disabled) {
+    background: #D4AF37;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+}
+
+.btn-submit:disabled {
+    background: #d1d5db;
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* Success Message */
+.success-message {
+    padding: 2rem;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.success-icon {
+    font-size: 4rem;
+    color: #10b981;
+    margin-bottom: 1rem;
+}
+
+.success-message h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 1.5rem 0;
+}
+
+.confirmation-details {
+    background: #f9fafb;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.confirmation-details p {
+    margin: 0.5rem 0;
+    color: #374151;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.confirmation-details strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.confirmation-details span {
+    color: #6b7280;
+}
+
+.btn-close-success {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background: #fbbf24;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+
+.btn-close-success:hover {
+    background: #D4AF37;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reservation-popup {
+        width: 95%;
+        max-height: 95vh;
+    }
+    
+    .popup-header {
+        padding: 1.5rem;
+    }
+    
+    .reservation-form {
+        padding: 1.5rem;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .btn-cancel,
+    .btn-submit {
+        width: 100%;
+    }
+}
+
+/* Loading State */
+.btn-submit.loading {
+    position: relative;
+    color: transparent;
+}
+
+.btn-submit.loading::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-text">
+                    <h1>The One</h1>
+                    <span class="tagline">Barber Club</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <div class="header-info">
+                    <span class="phone">📞 +56 9 3198 5036</span>
+                    <span class="hours">🕒 Lun-Vie: 10:00-20:00</span>
+                </div>
+                <button class="book-now-btn">Reservar Ahora</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="badge-icon">✂️</span>
+                    <span>Barbería Premium</span>
+                </div>
+                <h1>El Arte del Barbering Moderno</h1>
+                <p class="hero-subtitle">Donde la tradición se encuentra con la innovación. Experimenta el mejor cuidado masculino en un ambiente exclusivo diseñado para el hombre moderno.</p>
+                
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Barberos Certificados</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-coffee"></i>
+                        <span>Bebida de Cortesía</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Reservas Online</span>
+            </div>
+        </div>
+                
+                <div class="hero-actions">
+                    <button class="primary-btn">Ver Servicios</button>
+                    <button class="secondary-btn">Nuestro Equipo</button>
+                </div>
+                    </div>
+            
+            <div class="hero-image">
+                <div class="image-frame">
+                    <div class="barber-tools">
+                        <div class="tool scissors">✂️</div>
+                        <div class="tool razor">🪒</div>
+                        <div class="tool brush">🪮</div>
+                    </div>
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-tie"></i>
+                        <p>Barbero profesional trabajando</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-container">
+            <!-- Left Column - Business Info -->
+            <div class="left-column">
+                <!-- Business Showcase -->
+                <div class="business-showcase">
+                    <div class="showcase-header">
+                        <h2>The One Barber Club</h2>
+                        <div class="rating-badge">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">5.0 (122 reseñas)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="showcase-content">
+                        <div class="business-description">
+                            <p>Somos más que una barbería tradicional. En The One Barber Club, creamos experiencias únicas que transforman no solo tu look, sino tu confianza. Nuestro equipo de barberos expertos combina técnicas clásicas con las últimas tendencias para ofrecerte el mejor servicio de cuidado masculino.</p>
+                            
+                            <div class="highlight-features">
+                                <div class="highlight">
+                                    <i class="fas fa-cut"></i>
+                                    <span>Cortes Personalizados</span>
+                                </div>
+                                <div class="highlight">
+                                    <i class="fas fa-mustache"></i>
+                                    <span>Perfilado de Barba</span>
+                    </div>
+                                <div class="highlight premium">
+                                    <i class="fas fa-spa"></i>
+                                    <span>Tratamientos Premium</span>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="social-connect">
+                            <h4>Conéctate con Nosotros</h4>
+                            <div class="social-links">
+                                <a href="#" class="social-link instagram">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>@theonebarberclub</span>
+                                </a>
+                                <a href="#" class="social-link whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>WhatsApp</span>
+                                </a>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Location & Professionals -->
+            <div class="right-column">
+                <!-- Map Section -->
+                <div class="map-section">
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Google Maps - The One Barber Club</p>
+                        </div>
+                    </div>
+                    
+                    <div class="location-info">
+                        <div class="address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Camino Los Trapenses 2140 Local 202B, Lo Barnechea, Santiago, Chile</span>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>56931985036</span>
+                            </div>
+                            <div class="contact-item whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>¡Contáctanos por Whatsapp!</span>
+                    </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Ver horario</span>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Professionals Section -->
+                <div class="professionals-section">
+                    <h3>Profesionales</h3>
+                    <div class="professionals-list">
+                        <div class="professional-card">
+                            <div class="professional-avatar">
+                                <span>HR</span>
+                            </div>
+                            <span class="professional-name">Harol Rojas</span>
+                        </div>
+                        <div class="professional-card">
+                            <div class="professional-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="professional-name">Benjamín Irarrazab...</span>
+                        </div>
+                        <div class="professional-card">
+                            <div class="professional-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="professional-name">Camilo Castro</span>
+                        </div>
+                        <div class="professional-card">
+                            <div class="professional-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="professional-name">Fabian Fabrer</span>
+            </div>
+                        <div class="professional-card">
+                            <div class="professional-avatar">
+                                <i class="fas fa-user"></i>
+                    </div>
+                            <span class="professional-name">Yako Amaro...</span>
+                    </div>
+                        <div class="scroll-arrow">
+                            <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                        <div class="scroll-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                    </div>
+                    </div>
+                    <div class="pagination-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="services-container">
+            <div class="services-grid">
+                <!-- Classic Services -->
+                <div class="service-card classic" data-category="classic">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Corte Clásico</h3>
+                        <p>El corte perfecto que nunca pasa de moda</p>
+                        <div class="service-details">
+                            <span class="duration">45 min</span>
+                            <span class="price">$23.900</span>
+                        </div>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+                
+                <div class="service-card classic" data-category="classic">
+                    <div class="service-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Corte Infantil</h3>
+                        <p>Especialistas en cortes para niños</p>
+                        <div class="service-details">
+                            <span class="duration">45 min</span>
+                            <span class="price">$20.990</span>
+                        </div>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+                
+                <div class="service-card classic" data-category="classic">
+                    <div class="service-icon">
+                        <i class="fas fa-mustache"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Perfilado de Barba</h3>
+                        <p>Diseño y perfilado profesional</p>
+                        <div class="service-details">
+                            <span class="duration">25 min</span>
+                            <span class="price">$16.500</span>
+                        </div>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+                
+                <!-- Premium Services -->
+                <div class="service-card premium" data-category="premium">
+                    <div class="service-badge">Premium</div>
+                    <div class="service-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Master Barber</h3>
+                        <p>Experiencia completa con nuestro barbero principal</p>
+                        <div class="service-details">
+                            <span class="duration">60 min</span>
+                            <span class="price">$26.900</span>
+                        </div>
+                        <button class="book-btn premium-btn">Reservar</button>
+                    </div>
+                </div>
+                
+                <div class="service-card premium" data-category="premium">
+                    <div class="service-badge">Premium</div>
+                    <div class="service-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Tratamiento VIP</h3>
+                        <p>Corte + Barba + Tratamiento facial completo</p>
+                        <div class="service-details">
+                            <span class="duration">90 min</span>
+                            <span class="price">$35.900</span>
+                        </div>
+                        <button class="book-btn premium-btn">Reservar</button>
+                    </div>
+                </div>
+                
+                <div class="service-card premium" data-category="premium">
+                    <div class="service-badge">Premium</div>
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Relax & Style</h3>
+                        <p>Masaje capilar + corte + bebida premium</p>
+                        <div class="service-details">
+                            <span class="duration">75 min</span>
+                            <span class="price">$29.900</span>
+                        </div>
+                        <button class="book-btn premium-btn">Reservar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Chat Menu -->
+    <div class="social-chat-menu">
+        <button class="chat-menu-btn" id="chatMenuBtn">
+            <i class="fas fa-ellipsis-v"></i>
+        </button>
+        <div class="chat-dropdown" id="chatDropdown">
+            <a href="#" class="chat-option whatsapp-option" id="whatsappLink">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="#" class="chat-option instagram-option" id="instagramLink">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Reservation Popup Modal -->
+    <div id="reservationOverlay" class="reservation-overlay">
+        <div class="reservation-popup">
+            <button class="popup-close" onclick="closeReservationPopup()">&times;</button>
+            
+            <div class="popup-header">
+                <h2>Reservar Servicio</h2>
+                <p class="service-name" id="selectedServiceName"></p>
+            </div>
+            
+            <form id="reservationForm" class="reservation-form">
+                <input type="hidden" id="selectedServiceId" name="serviceId">
+                <input type="hidden" id="selectedServiceDuration" name="serviceDuration">
+                
+                <div class="form-group">
+                    <label for="customerName">
+                        <i class="fas fa-user"></i>
+                        Nombre Completo *
+                    </label>
+                    <input 
+                        type="text" 
+                        id="customerName" 
+                        name="customerName" 
+                        required 
+                        placeholder="Ingresa tu nombre completo"
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="reservationDate">
+                        <i class="fas fa-calendar"></i>
+                        Fecha Deseada *
+                    </label>
+                    <input 
+                        type="date" 
+                        id="reservationDate" 
+                        name="reservationDate" 
+                        required
+                        min=""
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="reservationTime">
+                        <i class="fas fa-clock"></i>
+                        Hora Deseada *
+                    </label>
+                    <select 
+                        id="reservationTime" 
+                        name="reservationTime" 
+                        required
+                        onchange="checkAvailability()"
+                    >
+                        <option value="">Selecciona una hora</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="10:30">10:30 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="11:30">11:30 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="12:30">12:30 PM</option>
+                        <option value="13:00">1:00 PM</option>
+                        <option value="13:30">1:30 PM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="14:30">2:30 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="15:30">3:30 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                        <option value="16:30">4:30 PM</option>
+                        <option value="17:00">5:00 PM</option>
+                        <option value="17:30">5:30 PM</option>
+                        <option value="18:00">6:00 PM</option>
+                        <option value="18:30">6:30 PM</option>
+                        <option value="19:00">7:00 PM</option>
+                        <option value="19:30">7:30 PM</option>
+                    </select>
+                </div>
+                
+                <div id="availabilitySection" class="form-group" style="display: none;">
+                    <label>
+                        <i class="fas fa-user-tie"></i>
+                        Barbero Disponible *
+                    </label>
+                    <div id="availabilityLoading" class="availability-loading" style="display: none;">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <span>Verificando disponibilidad...</span>
+                    </div>
+                    <div id="availabilityResults"></div>
+                </div>
+                
+                <div class="form-group optional-section">
+                    <label for="customerPhone">
+                        <i class="fas fa-phone"></i>
+                        Teléfono (Opcional)
+                    </label>
+                    <input 
+                        type="tel" 
+                        id="customerPhone" 
+                        name="customerPhone" 
+                        placeholder="+56 9 1234 5678"
+                    >
+                </div>
+                
+                <div class="form-group optional-section">
+                    <label for="customerEmail">
+                        <i class="fas fa-envelope"></i>
+                        Email (Opcional)
+                    </label>
+                    <input 
+                        type="email" 
+                        id="customerEmail" 
+                        name="customerEmail" 
+                        placeholder="tu@email.com"
+                    >
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="closeReservationPopup()">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="btn-submit" id="submitButton" disabled>
+                        <i class="fas fa-check"></i>
+                        Confirmar Reserva
+                    </button>
+                </div>
+            </form>
+            
+            <div id="successMessage" class="success-message" style="display: none;">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>¡Reserva Confirmada!</h3>
+                <div class="confirmation-details">
+                    <p><strong>Servicio:</strong> <span id="confirmService"></span></p>
+                    <p><strong>Barbero:</strong> <span id="confirmBarber"></span></p>
+                    <p><strong>Fecha y Hora:</strong> <span id="confirmDateTime"></span></p>
+                    <p><strong>Cliente:</strong> <span id="confirmName"></span></p>
+                </div>
+                <button class="btn-close-success" onclick="closeReservationPopup()">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+// Enhanced Barbershop Website Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Book Now Button Handler
+    const bookNowBtn = document.querySelector('.book-now-btn');
+    if (bookNowBtn) {
+        bookNowBtn.addEventListener('click', function() {
+            // Scroll to services section
+            const servicesSection = document.querySelector('.services-section');
+            if (servicesSection) {
+                servicesSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+    }
+    
+    // Hero Action Buttons
+    const primaryBtn = document.querySelector('.primary-btn');
+    const secondaryBtn = document.querySelector('.secondary-btn');
+    
+    if (primaryBtn) {
+        primaryBtn.addEventListener('click', function() {
+            const servicesSection = document.querySelector('.services-section');
+            if (servicesSection) {
+                servicesSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            }
+        });
+    }
+    
+    if (secondaryBtn) {
+        secondaryBtn.addEventListener('click', function() {
+            const professionalsSection = document.querySelector('.professionals-section');
+            if (professionalsSection) {
+                professionalsSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
+    
+    // Service Category Filtering
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const serviceCards = document.querySelectorAll('.service-card');
+    
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Remove active class from all buttons
+            categoryBtns.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            const category = this.getAttribute('data-category');
+            
+            // Filter service cards
+            serviceCards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeInUp 0.5s ease';
+                } else {
+                    card.style.display = 'none';
+        }
+    });
+});
+    });
+    
+    // Book Service Buttons
+    const bookBtns = document.querySelectorAll('.book-btn');
+    bookBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const serviceCard = this.closest('.service-card');
+            const serviceName = serviceCard.querySelector('h3').textContent;
+            const servicePrice = serviceCard.querySelector('.price').textContent;
+            const serviceDuration = serviceCard.querySelector('.duration').textContent;
+            
+            // Create booking modal content
+            const bookingMessage = `
+🏪 The One Barber Club
+✂️ Servicio: ${serviceName}
+💰 Precio: ${servicePrice}
+⏱️ Duración: ${serviceDuration}
+
+¡Reserva tu cita ahora! 🎯
+            `;
+            
+            // Open WhatsApp with booking message
+            const phoneNumber = '56931985036';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(bookingMessage)}`;
+            window.open(url, '_blank');
+        });
+    });
+    
+    // Professional Cards Scroll
+    const professionalsList = document.querySelector('.professionals-list');
+    const scrollArrow = document.querySelector('.scroll-arrow');
+    
+    if (scrollArrow && professionalsList) {
+        scrollArrow.addEventListener('click', function() {
+            professionalsList.scrollBy({
+                left: 200,
+                behavior: 'smooth'
+    });
+});
+    }
+    
+    // Pagination Dots for Professionals
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            // Remove active class from all dots
+            dots.forEach(d => d.classList.remove('active'));
+            // Add active class to clicked dot
+            this.classList.add('active');
+            
+            // Scroll professionals list based on dot clicked
+            if (professionalsList) {
+                const scrollAmount = index * 200;
+                professionalsList.scrollTo({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Professional Cards Click
+    const professionalCards = document.querySelectorAll('.professional-card');
+    professionalCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const name = this.querySelector('.professional-name').textContent;
+            
+            // Create professional info message
+            const professionalMessage = `
+👨‍💼 The One Barber Club
+✂️ Profesional: ${name}
+⭐ Experiencia y calidad garantizada
+
+¡Reserva tu cita con ${name}! 🎯
+            `;
+            
+            // Open WhatsApp with professional booking
+            const phoneNumber = '56931985036';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(professionalMessage)}`;
+            window.open(url, '_blank');
+        });
+    });
+    
+    // Contact Items
+    const contactItems = document.querySelectorAll('.contact-item');
+    contactItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const icon = this.querySelector('i');
+            
+            if (icon.classList.contains('fa-phone')) {
+                // Phone call
+                window.location.href = 'tel:+56931985036';
+            } else if (icon.classList.contains('fa-whatsapp')) {
+                // WhatsApp
+                const phoneNumber = '56931985036';
+                const message = 'Hola! Me gustaría obtener más información sobre los servicios de The One Barber Club.';
+                const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(url, '_blank');
+            } else if (icon.classList.contains('fa-clock')) {
+                // Show hours
+                alert('🕒 Horarios de Atención:\n\n📅 Lunes a Viernes: 10:00 - 20:00\n📅 Sábados: 11:00 - 18:00\n📅 Domingos: Cerrado\n\n¡Te esperamos! ✂️');
+            }
+        });
+    });
+    
+    // Social Media Chat Menu
+    const chatMenuBtn = document.getElementById('chatMenuBtn');
+    const chatDropdown = document.getElementById('chatDropdown');
+    const whatsappLink = document.getElementById('whatsappLink');
+    const instagramLink = document.getElementById('instagramLink');
+    
+    // Toggle dropdown menu
+    if (chatMenuBtn && chatDropdown) {
+        chatMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            chatDropdown.classList.toggle('show');
+        });
+    }
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (chatDropdown && !chatDropdown.contains(e.target) && !chatMenuBtn.contains(e.target)) {
+            chatDropdown.classList.remove('show');
+        }
+    });
+    
+    // WhatsApp option
+    if (whatsappLink) {
+        whatsappLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const phoneNumber = '56931985036';
+            const message = 'Hola! Me gustaría obtener más información sobre los servicios de The One Barber Club.';
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+            chatDropdown.classList.remove('show');
+        });
+    }
+    
+    // Instagram option
+    if (instagramLink) {
+        instagramLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Placeholder for Instagram link - easy to update later
+            const instagramUrl = 'https://instagram.com/theonebarberclub';
+            window.open(instagramUrl, '_blank');
+            chatDropdown.classList.remove('show');
+        });
+    }
+    
+    // Social Links in Business Showcase
+    const socialLinks = document.querySelectorAll('.social-link');
+    socialLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const icon = this.querySelector('i');
+            
+            if (icon.classList.contains('fa-instagram')) {
+                // Instagram link
+                window.open('https://instagram.com/theonebarberclub', '_blank');
+            } else if (icon.classList.contains('fa-whatsapp')) {
+                // WhatsApp link
+                const phoneNumber = '56931985036';
+                const message = 'Hola! Me gustaría obtener más información sobre los servicios de The One Barber Club.';
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+}
+        });
+    });
+    
+    // Smooth scrolling for any anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 50) {
+            header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            header.style.backdropFilter = 'blur(10px)';
+            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        } else {
+            header.style.backgroundColor = '';
+            header.style.backdropFilter = 'none';
+            header.style.boxShadow = '';
+        }
+    });
+    
+    // Loading animation
+window.addEventListener('load', function() {
+    document.body.style.opacity = '0';
+    document.body.style.transition = 'opacity 0.5s ease';
+    
+    setTimeout(() => {
+        document.body.style.opacity = '1';
+    }, 100);
+});
+
+    // Intersection Observer for animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Observe elements for animation
+    document.querySelectorAll('.service-card, .professional-card, .business-showcase, .hero-text, .hero-image').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'all 0.6s ease';
+    observer.observe(el);
+});
+
+    // Keyboard navigation support
+    document.addEventListener('keydown', function(e) {
+        // ESC key closes any open modals or resets states
+        if (e.key === 'Escape') {
+            // Close dropdown if open
+            if (chatDropdown && chatDropdown.classList.contains('show')) {
+                chatDropdown.classList.remove('show');
+            }
+        }
+    });
+    
+    // Add CSS animation for service cards
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Console welcome message
+    console.log('%cThe One Barber Club', 'color: #D4AF37; font-size: 20px; font-weight: bold;');
+    console.log('%cEl Arte del Barbering Moderno', 'color: #1a1a1a; font-size: 14px;');
+    console.log('%cDesarrollado con ❤️ para la mejor experiencia de barbería', 'color: #333333; font-size: 12px;');
+});
+    </script>
+    <script>
+/**
+ * Reservation Popup JavaScript
+ * Handles the reservation popup functionality, availability checking, and booking submission
+ */
+
+// API Configuration
+const API_BASE_URL = 'https://barbershop-api-ssup.onrender.com/api';
+
+// Global state
+let selectedService = null;
+let selectedBarber = null;
+let availableBarbers = [];
+
+/**
+ * Open the reservation popup for a specific service
+ * @param {string} serviceId - The ID of the service to book
+ * @param {string} serviceName - The name of the service
+ * @param {number} serviceDuration - The duration of the service in minutes
+ */
+function openReservationPopup(serviceId, serviceName, serviceDuration) {
+    selectedService = {
+        id: serviceId,
+        name: serviceName,
+        duration: serviceDuration
+    };
+    
+    // Set service details in the popup
+    document.getElementById('selectedServiceId').value = serviceId;
+    document.getElementById('selectedServiceDuration').value = serviceDuration;
+    document.getElementById('selectedServiceName').textContent = serviceName;
+    
+    // Set minimum date to today
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('reservationDate').setAttribute('min', today);
+    
+    // Reset form
+    document.getElementById('reservationForm').reset();
+    document.getElementById('availabilitySection').style.display = 'none';
+    document.getElementById('successMessage').style.display = 'none';
+    document.getElementById('submitButton').disabled = true;
+    selectedBarber = null;
+    
+    // Show overlay
+    const overlay = document.getElementById('reservationOverlay');
+    overlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+
+/**
+ * Close the reservation popup
+ */
+function closeReservationPopup() {
+    const overlay = document.getElementById('reservationOverlay');
+    overlay.classList.remove('show');
+    document.body.style.overflow = '';
+    
+    // Reset state
+    selectedService = null;
+    selectedBarber = null;
+    availableBarbers = [];
+}
+
+/**
+ * Check availability when date and time are selected
+ */
+async function checkAvailability() {
+    const date = document.getElementById('reservationDate').value;
+    const time = document.getElementById('reservationTime').value;
+    const serviceId = document.getElementById('selectedServiceId').value;
+    
+    // Only check if both date and time are selected
+    if (!date || !time) {
+        document.getElementById('availabilitySection').style.display = 'none';
+        return;
+    }
+    
+    // Show availability section
+    document.getElementById('availabilitySection').style.display = 'block';
+    document.getElementById('availabilityLoading').style.display = 'flex';
+    document.getElementById('availabilityResults').innerHTML = '';
+    document.getElementById('submitButton').disabled = true;
+    selectedBarber = null;
+    
+    // Combine date and time into ISO format
+    const dateTime = `${date}T${time}:00`;
+    
+    try {
+        const response = await fetch(
+            `${API_BASE_URL}/available-barbers?serviceId=${serviceId}&dateTime=${dateTime}`
+        );
+        
+        if (!response.ok) {
+            throw new Error('Failed to check availability');
+        }
+        
+        const data = await response.json();
+        document.getElementById('availabilityLoading').style.display = 'none';
+        
+        if (data.available && data.barbers.length > 0) {
+            displayAvailableBarbers(data.barbers);
+        } else {
+            displayNoAvailability();
+        }
+    } catch (error) {
+        console.error('Error checking availability:', error);
+        document.getElementById('availabilityLoading').style.display = 'none';
+        document.getElementById('availabilityResults').innerHTML = `
+            <div class="no-availability">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>Error al verificar disponibilidad. Por favor, intenta nuevamente.</p>
+            </div>
+        `;
+    }
+}
+
+/**
+ * Display available barbers
+ * @param {Array} barbers - List of available barbers
+ */
+function displayAvailableBarbers(barbers) {
+    availableBarbers = barbers;
+    const resultsContainer = document.getElementById('availabilityResults');
+    
+    resultsContainer.innerHTML = barbers.map(barber => `
+        <div class="barber-option" onclick="selectBarber('${barber.id}', '${barber.name}')">
+            <div class="barber-info">
+                <div class="barber-avatar">
+                    ${barber.name.substring(0, 2).toUpperCase()}
+                </div>
+                <div class="barber-details">
+                    <h4>${barber.name}</h4>
+                    <p>${barber.bio || 'Barbero profesional'}</p>
+                </div>
+            </div>
+            <div class="barber-select-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+        </div>
+    `).join('');
+}
+
+/**
+ * Display no availability message
+ */
+function displayNoAvailability() {
+    document.getElementById('availabilityResults').innerHTML = `
+        <div class="no-availability">
+            <i class="fas fa-calendar-times"></i>
+            <p><strong>No hay reservas disponibles</strong></p>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;">
+                Por favor, selecciona otra fecha u horario.
+            </p>
+        </div>
+    `;
+    document.getElementById('submitButton').disabled = true;
+}
+
+/**
+ * Select a barber
+ * @param {string} barberId - The ID of the selected barber
+ * @param {string} barberName - The name of the selected barber
+ */
+function selectBarber(barberId, barberName) {
+    selectedBarber = {
+        id: barberId,
+        name: barberName
+    };
+    
+    // Update UI
+    const barberOptions = document.querySelectorAll('.barber-option');
+    barberOptions.forEach(option => {
+        option.classList.remove('selected');
+    });
+    
+    event.currentTarget.classList.add('selected');
+    
+    // Enable submit button
+    document.getElementById('submitButton').disabled = false;
+}
+
+/**
+ * Handle form submission
+ */
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('reservationForm');
+    if (form) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            if (!selectedBarber) {
+                alert('Por favor, selecciona un barbero disponible');
+                return;
+            }
+            
+            const submitButton = document.getElementById('submitButton');
+            submitButton.classList.add('loading');
+            submitButton.disabled = true;
+            
+            // Collect form data
+            const formData = {
+                customerName: document.getElementById('customerName').value,
+                customerEmail: document.getElementById('customerEmail').value || null,
+                customerPhone: document.getElementById('customerPhone').value || null,
+                serviceId: document.getElementById('selectedServiceId').value,
+                barberId: selectedBarber.id,
+                startTime: `${document.getElementById('reservationDate').value}T${document.getElementById('reservationTime').value}:00`
+            };
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/reservations`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.error || 'Failed to create reservation');
+                }
+                
+                const data = await response.json();
+                
+                // Show success message
+                showSuccessMessage(data.reservation);
+                
+            } catch (error) {
+                console.error('Error creating reservation:', error);
+                alert('Error al crear la reserva: ' + error.message);
+                submitButton.classList.remove('loading');
+                submitButton.disabled = false;
+            }
+        });
+    }
+    
+    // Listen for date/time changes
+    const dateInput = document.getElementById('reservationDate');
+    const timeInput = document.getElementById('reservationTime');
+    
+    if (dateInput) {
+        dateInput.addEventListener('change', checkAvailability);
+    }
+    
+    // Close popup when clicking outside
+    const overlay = document.getElementById('reservationOverlay');
+    if (overlay) {
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) {
+                closeReservationPopup();
+            }
+        });
+    }
+});
+
+/**
+ * Show success message after booking
+ * @param {Object} reservation - The created reservation data
+ */
+function showSuccessMessage(reservation) {
+    // Hide form
+    document.getElementById('reservationForm').style.display = 'none';
+    
+    // Format date and time
+    const dateTime = new Date(reservation.start_time);
+    const formattedDate = dateTime.toLocaleDateString('es-CL', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+    const formattedTime = dateTime.toLocaleTimeString('es-CL', {
+        hour: '2-digit',
+        minute: '2-digit'
+    });
+    
+    // Update confirmation details
+    document.getElementById('confirmService').textContent = reservation.service_name;
+    document.getElementById('confirmBarber').textContent = reservation.barber_name;
+    document.getElementById('confirmDateTime').textContent = `${formattedDate} a las ${formattedTime}`;
+    document.getElementById('confirmName').textContent = reservation.customer_name;
+    
+    // Show success message
+    document.getElementById('successMessage').style.display = 'block';
+}
+
+/**
+ * Attach booking functionality to all book buttons
+ */
+function initializeBookingButtons() {
+    // Get all service cards
+    const serviceCards = document.querySelectorAll('.service-card');
+    
+    serviceCards.forEach(card => {
+        const serviceName = card.querySelector('h3')?.textContent;
+        const durationText = card.querySelector('.duration')?.textContent;
+        const durationMinutes = durationText ? parseInt(durationText) : 60;
+        
+        // Get or create book button
+        let bookButton = card.querySelector('.book-btn');
+        
+        if (bookButton && serviceName) {
+            // Remove any existing click handlers
+            const newButton = bookButton.cloneNode(true);
+            bookButton.parentNode.replaceChild(newButton, bookButton);
+            
+            // Add new click handler
+            newButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Generate a service ID (in production, this would come from the database)
+                const serviceId = generateServiceId(serviceName);
+                
+                openReservationPopup(serviceId, serviceName, durationMinutes);
+            });
+        }
+    });
+}
+
+/**
+ * Generate a consistent service ID from service name
+ * @param {string} serviceName - The name of the service
+ * @returns {string} - A consistent ID for the service
+ */
+function generateServiceId(serviceName) {
+    // Create a simple hash from the service name
+    const serviceMap = {
+        'Corte Clásico': 'service-1',
+        'Corte Infantil': 'service-2',
+        'Perfilado de Barba': 'service-3',
+        'Master Barber': 'service-4',
+        'Tratamiento VIP': 'service-5',
+        'Relax & Style': 'service-6'
+    };
+    
+    return serviceMap[serviceName] || 'service-default';
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeBookingButtons);
+} else {
+    initializeBookingButtons();
+}
+
+// Export functions for use in HTML onclick attributes
+window.openReservationPopup = openReservationPopup;
+window.closeReservationPopup = closeReservationPopup;
+window.checkAvailability = checkAvailability;
+window.selectBarber = selectBarber;
+
+
+
+
+    </script>
+</body>
+</html>
