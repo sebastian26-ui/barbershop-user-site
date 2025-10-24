@@ -2610,17 +2610,21 @@ function initializeBookingButtons() {
  * @returns {string} - A consistent ID for the service
  */
 function generateServiceId(serviceName) {
-    // Create a simple hash from the service name
+    // Map service names to actual database IDs
     const serviceMap = {
-        'Corte Clásico': 'service-1',
-        'Corte Infantil': 'service-2',
-        'Perfilado de Barba': 'service-3',
-        'Master Barber': 'service-4',
-        'Tratamiento VIP': 'service-5',
-        'Relax & Style': 'service-6'
+        'Corte Clásico': 'corte-clasico',
+        'Corte + Barba': 'corte-barba',
+        'Fade': 'fade',
+        'Arreglo de Barba': 'barba',
+        'Perfilado de Barba': 'barba',
+        // Legacy mappings for compatibility
+        'Corte Infantil': 'corte-clasico',
+        'Master Barber': 'fade',
+        'Tratamiento VIP': 'corte-barba',
+        'Relax & Style': 'corte-clasico'
     };
     
-    return serviceMap[serviceName] || 'service-default';
+    return serviceMap[serviceName] || 'corte-clasico';
 }
 
 // Initialize when DOM is ready
