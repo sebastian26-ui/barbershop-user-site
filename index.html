@@ -2383,7 +2383,7 @@ async function checkAvailability() {
         const data = await response.json();
         document.getElementById('availabilityLoading').style.display = 'none';
         
-        if (data.available && data.barbers.length > 0) {
+        if (data.barbers && data.barbers.length > 0) {
             displayAvailableBarbers(data.barbers);
         } else {
             displayNoAvailability();
