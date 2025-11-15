@@ -12,6 +12,15 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+body {
+    position: relative;
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
@@ -992,10 +1001,13 @@ body {
     
     .professionals-list {
         gap: 1rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
     
     .professional-card {
         min-width: 80px;
+        flex-shrink: 0;
     }
     
     .professional-avatar {
@@ -1008,10 +1020,24 @@ body {
         font-size: 0.8rem;
     }
     
+    /* Force single column layout on mobile */
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .left-column,
+    .right-column {
+        width: 100%;
+        max-width: 100%;
+    }
+    
     /* Map Section Mobile Fix */
     .map-section {
         margin-bottom: 1.5rem;
         width: 100%;
+        max-width: 100%;
         overflow: hidden;
     }
     
@@ -1043,6 +1069,17 @@ body {
     .contact-item {
         padding: 0.6rem;
         font-size: 0.9rem;
+    }
+    
+    /* Business showcase mobile */
+    .business-showcase {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .professionals-section {
+        width: 100%;
+        max-width: 100%;
     }
 }
 
